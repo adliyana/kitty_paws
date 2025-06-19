@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Swipe App</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="background-image">
+    <div id="welcome-container">
+        <div id="welcome-flex">
+            <h1 id="welcome-message">
+                <span>WELCOME TO</span>
+                KITTY PAWS WORLD!
+            </h1>
+            <img id="catGif" src="../assets/images/cat.gif" alt="Cat GIF" />
+        </div>
+    </div>
+
+    <div class="container">
+        <p id="welcome-message-text" style="font-size: 18px; font-family: 'Poppins', sans-serif; color: #333; font-weight: 500;">
+            Enjoy browsing through cute cats and choose your favorites!
+        </p>
+
+        <div class="card-container">
+            <div id="swipeContainer" class="swipe-container">
+                <img id="catImage" src="https://placekitten.com/400/400" alt="Cat Image" />
+            </div>
+        </div>
+
+        <p id="swipeInstruction">
+            <span >Swipe</span> 
+            right</span> to <span style="color: green;">like</span>👍 or 
+            swipe left</span> to <span style="color: red;">dislike</span>👎 the cat image.
+        </p>
+
+        <!-- Liked Cat Images Display -->
+        <div class="cats-display">
+            <div id="likedCatsContainer">
+                <!-- Liked cats will be displayed here -->
+            </div>
+            <div id="likedCatsCounter">
+            </div>
+        </div>
+
+        <!-- Message container for the final results -->
+        <div id="messageContainer" style="display:none;">
+            <!-- This will show the final message with the total liked cats -->
+        </div>
+
+        <!-- Action hints for swipe directions -->
+        <div class="action-left" style="display:none;">Left Swipe</div>
+        <div class="action-right" style="display:none;">Right Swipe</div>
+
+    </div>
+
+    
+
+    <script src="../assets/js/userKitty.js"></script>
+</body>
+</html>

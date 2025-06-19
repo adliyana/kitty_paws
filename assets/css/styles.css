@@ -1,0 +1,181 @@
+body {
+    font-family: "Rubik Bubbles", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    height: 100vh; /* Use full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center all vertically */
+    align-items: center; /* Center all horizontally */
+    overflow: scroll; /* Prevent scrolling */
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.background-image {
+    flex: 1;
+    background: url('../images/background.png') no-repeat center center fixed; /* 'fixed' will ensure it doesn't scroll */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    height: 100vh; /* Ensure it covers the full height of the viewport */
+    margin: 0;
+}
+
+/* Card styling */
+.swipe-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    touch-action: none;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+#catImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#statusMessage {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+#likedCatsContainer, #dislikedCatsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#likedCatsContainer img, #dislikedCatsContainer img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+#likedCatsCounter, #dislikedCatsCounter {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.action-left, .action-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.action-left {
+    left: 10px;
+}
+
+.action-right {
+    right: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center the GIF */
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#swipeInstruction {
+    font-size: 18px; /* Same font size as welcome message */
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Standard text color */
+    font-weight: 500; /* Normal font weight */
+    margin-top: 0px; /* Remove the top margin */
+    margin-bottom: 20px; /* Give some space below */
+    text-align: center; /* Center the text */
+}
+
+#welcome-container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally center the items */
+    text-align: center; /* Center the text */
+    flex-direction: column; /* Align items in a column */
+    margin-top: 50px;
+}
+
+#welcome-message {
+    margin: 0;
+    font-family: "Gorditas", serif;
+    font-size: 3.5em;
+    color: #ea5f24;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+#welcome-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* For responsiveness on smaller screens */
+    gap: 20px; /* Space between heading and GIF */
+}
+
+#catGif {
+    width: 150px;
+    height: auto;
+    margin: 0; /* Remove margin that pushes it down */
+}
+
+
+#welcome-message-text {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#welcome-message span {
+    display: block; /* Makes the text go to a new line */
+    font-size: 1em; /* Keeps a normal size for each part */
+}
+
+.gorditas-regular {
+    font-family: "Gorditas", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .gorditas-bold {
+    font-family: "Gorditas", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
