@@ -1,7 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Rubik Bubbles", system-ui, sans-serif;
     font-weight: 400;
-    font-style: normal;
+    /* font-style: normal; */
     margin: 0;
     height: 100vh; /* Use full viewport height */
     display: flex;
@@ -12,17 +18,22 @@ body {
 }
 
 .container {
+    width: 90%;
     max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 .background-image {
     flex: 1;
-    background: url('../images/background.png') no-repeat center center fixed; /* 'fixed' will ensure it doesn't scroll */
-    background-size: cover; /* Ensures the image covers the entire viewport */
-    height: 100vh; /* Ensure it covers the full height of the viewport */
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
     margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 /* Card styling */
@@ -110,23 +121,26 @@ img {
     }
 }
 
-#swipeInstruction {
-    font-size: 18px; /* Same font size as welcome message */
-    font-family: 'Poppins', sans-serif;
-    color: #333; /* Standard text color */
-    font-weight: 500; /* Normal font weight */
-    margin-top: 0px; /* Remove the top margin */
-    margin-bottom: 20px; /* Give some space below */
-    text-align: center; /* Center the text */
+.swipe-container {
+    width: 90%;
+    max-width: 300px;
+    height: 60vh;
+    margin: 20px auto;
+    overflow: hidden;
+    touch-action: none;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
 }
 
 #welcome-container {
     display: flex;
-    align-items: center; /* Vertically center the items */
-    justify-content: center; /* Horizontally center the items */
-    text-align: center; /* Center the text */
-    flex-direction: column; /* Align items in a column */
-    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 200px;
 }
 
 #welcome-message {
@@ -135,21 +149,19 @@ img {
     font-size: 3.5em;
     color: #ea5f24;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: left;
+    /* text-align: left; */
 }
 
 #welcome-flex {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* For responsiveness on smaller screens */
-    gap: 20px; /* Space between heading and GIF */
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 #catGif {
-    width: 150px;
+    width: 120px;
     height: auto;
-    margin: 0; /* Remove margin that pushes it down */
 }
 
 
